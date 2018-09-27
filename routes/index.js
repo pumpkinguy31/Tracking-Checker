@@ -1,9 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const routeController = require('../controllers/RouteController');
+const trackingController = require('../controllers/TrackingController');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Tracking Checker' });
-});
+// ? PAGE ROUTES
+router.get('/', routeController.renderHomePage);
+// ? CHECK TRACKING ROUTES
+router.get('/test', trackingController.testController);
 
 module.exports = router;
