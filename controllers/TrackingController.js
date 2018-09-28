@@ -10,5 +10,8 @@ exports.requestSource = (req, res, next) => {
 
 // ? examines the source to find if there are any known tracking scripts
 exports.examineSource = (req, res) => {
-  // Render elements
+  // Examine the source code of the website
+  // Isolate the <head>
+  // examine the <head> to known tracking links
+  // Render a results page (res.render('results' {trackers: []}))
 };
